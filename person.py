@@ -26,7 +26,7 @@ class Person:
 
         else:
             self.bmi = (self.weight/(self.height**2)* 703)
-        for i in len(C.BMI_RANGES):
+        for i in range(len(C.BMI_RANGES)):
             range1 = C.BMI_RANGES[i][1], C.BMI_RANGES[i][2]
             print(range1)
             
