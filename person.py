@@ -1,11 +1,10 @@
 from constants import Constants as C
 class Person:
-    def __init__(self,age,weight,height,sex,metric):
+    def __init__(self,age,weight,height,sex):
         self.age = int(age)
         self.weight = int(weight)
         self.height = int(height)
         self.sex = sex
-        self.metric = metric
 
 
     def bmi_calc(self):
@@ -19,11 +18,7 @@ class Person:
 
 
     def adult_bmi(self):
-        #checks if numbers are in metric and then calculates 
-        if self.metric:
-            self.bmi = self.weight/((self.height*100)**2)
-        else:
-            self.bmi = (self.weight/(self.height**2)* 703)
+        self.bmi = (self.weight/(self.height**2)* 703)
         #checks which range the bmi falls into and returns the weight classifcation 
         for i in range(len(C.BMI_RANGES)):
             if C.BMI_RANGES[i][1] <= self.bmi <= C.BMI_RANGES[i][2]:
