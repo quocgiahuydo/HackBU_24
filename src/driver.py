@@ -37,7 +37,7 @@ class Driver:
            
 
     def run(self):
-        #self.config_data()
+        self.config_data()
         self.person_setup()
         
 
