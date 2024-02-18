@@ -22,3 +22,4 @@ class Txt_Process:
             print(f"An error occurred: {e}")
 
 
+text = Txt_Process("food_menus/c4.txt","food_menus/c4_out.txt")
