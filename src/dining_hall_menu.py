@@ -5,7 +5,7 @@ from datetime import date
 import os
 
 
-class dining_hall_menu:
+class Dining_Hall_Menu:
     def __init__(self,name,link):
         self.link = str(link)
         self.name = str(name)

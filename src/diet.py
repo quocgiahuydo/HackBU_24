@@ -1,4 +1,4 @@
-from constants import Constants as C
+from src.constants import Constants as C
 class Diet():
     def __init__(self,age,bmi,weight,weight_status,sex,exercise,height):
         self.bmi = bmi

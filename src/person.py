@@ -1,4 +1,4 @@
-from constants import Constants as C
+from src.constants import Constants as C
 class Person:
     def __init__(self,age,weight,height,sex):
         self.age = int(age)
