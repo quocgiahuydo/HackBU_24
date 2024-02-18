@@ -9,3 +9,5 @@ class Constants:
                   ["app","https://binghamton.sodexomyway.com/dining-near-me/appalachian-dining-hall"]]
     CARB_PERCENT_RANGE = (.45,.65)
     FAT_PERCENT_RANGE = (.20,.35)
+
+    MENU_FINAL = ['c4_output.txt',"app_output.txt","hinman.txt"]

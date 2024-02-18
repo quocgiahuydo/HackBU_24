@@ -41,8 +41,8 @@ class Driver:
         #self.config_data()
         #self.person_setup()
         x = Txt_Process("c4.txt","c4_output.txt")
-        food = Nutrition()
-        food.values_from_file(x)
+        food = Nutrition("c4_output.txt")
+        food.values()
         
 
 
