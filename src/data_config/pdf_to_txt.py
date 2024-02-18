@@ -7,4 +7,4 @@ class Pdf_To_Txt:
         convertapi.api_secret = f'{API.pdf_2_text}'
         convertapi.convert('txt', {
             'File': file
-        }, from_format = 'pdf').save_files(name)
+        }, from_format = 'pdf').save_files("src.config." + name)
