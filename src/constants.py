@@ -1,4 +1,5 @@
 class Constants:
+    #ratios for bmi classifactions
     BMI_RANGES = [
         ["UnderWeight",0,18.5],
     ["Healthy Weight",18.5,24.9],
