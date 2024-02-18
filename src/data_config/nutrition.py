@@ -1,6 +1,6 @@
 import requests
 import os
-from api_key import API
+from src.api_key import API
 
 class Nutrition:
     def __init__(self,food):
