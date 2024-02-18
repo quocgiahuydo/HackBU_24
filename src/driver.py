@@ -17,9 +17,8 @@ class Driver():
            
 
     def run(self):
-        dining 
-        asindis
-        sdjisdj
+        self.config_data()
+
 
     
 
