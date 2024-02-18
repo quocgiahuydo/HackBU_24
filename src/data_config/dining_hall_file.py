@@ -24,6 +24,6 @@ class Dining_Hall_File:
             if pdf_link:
                 break
         with open(pdf_path, 'wb') as pdf_file: pdf_file.write(requests.get(pdf_link).content)
-        return pdf_path
+        return pdf_path, self.name
         
         
