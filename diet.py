@@ -18,7 +18,21 @@ class Diet():
         
         return self.daily_cal
 
+    def macro_nut(self,low,high,cal_per_g):
+        low_num = self.calories * low /cal_per_g
+        high_num = self.calories * high / cal_per_g
+        return low_num,high_num
+
+
+
+
+
     def nutrients(self):
-        self.carb_range = 
+        self.carbs = self.macro_nut(.45,.65,4)
+        self.fats = self.macro_nut(.20,.35,9)
+        if self.sex == male:
+            self.fiber = 38
+        else:
+            self.fiber = 25
 
     
