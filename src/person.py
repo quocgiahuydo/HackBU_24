@@ -42,8 +42,8 @@ class Person:
 
     
     def nutrients(self):
-        self.carbs_g = self.macro_nut(.45,.65,4)
-        self.fats_g = self.macro_nut(.20,.35,9)
+        self.carbs_g = self.macro_nut(C.CARB_PERCENT_RANGE[0],CARB_PERCENT_RANGE[1],4)
+        self.fats_g = self.macro_nut(C.FAT_PERCENT_RANGE[0],FAT_PERCENT_RANGE[1],9)
         self.fiber_g = int(self.daily_cal / 1000 *14)
         self.protein_g = int(self.weight *.5)
             
