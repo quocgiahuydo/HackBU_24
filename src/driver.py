@@ -43,7 +43,7 @@ class Driver:
         x = Txt_Process("c4.txt","c4_output.txt")
         food = Nutrition("c4_output.txt")
         food.values()
-        print(food.list)
+       
         
 
 
