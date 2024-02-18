@@ -1,8 +1,7 @@
 from src.person import Person
-from src.diet import Diet
 from src.constants import Constants as C
 from src.data_config.dining_hall_file import Dining_Hall_File
-#from src.data_config.nutrition import Nutrition
+from src.data_config.nutrition import Nutrition
 from src.data_config.pdf_to_txt import Pdf_To_Txt
 
 class Driver:
@@ -40,6 +39,7 @@ class Driver:
     def run(self):
         #self.config_data()
         self.person_setup()
+        
 
 
     
