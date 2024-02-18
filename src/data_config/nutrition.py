@@ -14,6 +14,7 @@ class Nutrition:
             response = requests.get(api_url, headers={'X-Api-Key': f"{API.nutrition_api}"})
             self.list.append(response.text) #[["calories",dict[0]['calories']],["fat",dict[0]["fat_total_g"]],["protein",dict[0]["protein_g"]],["carbohydrates",dict[0]["carbohydrates_total_g"]],["fiber",dict[0]["fiber_g"]]]
             print(aline)
+            input()
             #print(self.list)
 
             
