@@ -1,4 +1,3 @@
-from ortools.sat.python import cp_model
 import numpy as np
 from src.constants import Constants as C
 
