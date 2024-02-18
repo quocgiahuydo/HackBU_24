@@ -3,6 +3,7 @@ from src.constants import Constants as C
 from src.data_config.dining_hall_file import Dining_Hall_File
 from src.data_config.nutrition import Nutrition
 from src.data_config.pdf_to_txt import Pdf_To_Txt
+from src.data_config.txt_process import Txt_Process
 
 class Driver:
     def __init__ (self):
@@ -37,8 +38,9 @@ class Driver:
            
 
     def run(self):
-        self.config_data()
-        self.person_setup()
+        #self.config_data()
+        #self.person_setup()
+        x = Txt_Process("c4.txt","c4_output.txt")
         
 
 
