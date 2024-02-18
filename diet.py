@@ -30,9 +30,7 @@ class Diet():
     def nutrients(self):
         self.carbs = self.macro_nut(.45,.65,4)
         self.fats = self.macro_nut(.20,.35,9)
-        if self.sex == male:
-            self.fiber = 38
-        else:
-            self.fiber = 25
+        self.fiber = self.daily_cal / 1000 *14
+        
 
     
