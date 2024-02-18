@@ -22,6 +22,7 @@ def get_c4_menu():
             break
     with open(pdf_path, 'wb') as pdf_file: pdf_file.write(requests.get(pdf_link).content)
     print(pdf_link)
+    print(pdf_path)
         
          
 
