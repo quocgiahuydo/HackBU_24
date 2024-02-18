@@ -11,8 +11,8 @@ class Driver():
 
 
     def config_data(self):
-        for i in range(len(C.hall_links)):
-           temp = Dining_Hall_File(C.hall_links[i][0],C.hall_links[i][1])
+        #for i in range(len(C.hall_links)):
+           temp = Dining_Hall_File(C.hall_links[0][0],C.hall_links[0][1])
            txt = Pdf_To_Txt(temp.get_hall_file())
            
 
