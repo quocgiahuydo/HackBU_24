@@ -1,5 +1,5 @@
 from src.constants import Constants as C
-class Diet():
+class Diet:
     def __init__(self,age,bmi,weight,weight_status,sex,exercise,height):
         self.bmi = bmi
         self.weight = weight 
