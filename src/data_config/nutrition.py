@@ -1,7 +1,7 @@
 import requests
 import os
 from src.api_key import API
-import ast
+
 
 
 class Nutrition:
