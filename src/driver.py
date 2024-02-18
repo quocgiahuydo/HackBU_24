@@ -12,9 +12,10 @@ class Driver:
 
 
     def config_data(self):
-        #for i in range(len(C.hall_links)):
-           temp = Dining_Hall_File(C.hall_links[0][0],C.hall_links[0][1])
+        for i in range(len(C.hall_links)):
+           temp = Dining_Hall_File(C.hall_links[i][0],C.hall_links[i][1])
            Pdf_To_Txt(temp.get_hall_file())
+           print("done")
 
 
     def person_setup(self):
@@ -29,8 +30,8 @@ class Driver:
         self.person.nutrients()
         print(self.person.carbs_g)
         print(self.person.fats_g)
-        print(self.person.fiber_g)
         print(self.person.protein_g)
+        
 
 
 
@@ -40,9 +41,10 @@ class Driver:
            
 
     def run(self):
-        #self.config_data()
+        self.config_data()
         self.person_setup()
-        x = Txt_Process("c4.txt","c4_output.txt")
+        dining_hall= input("which dinning hall do u wanna eat at? hinman,app, or c4")
+        Txt_Process(dining_hall + ".txt",dining_hall +"_out.txt")
         food = Nutrition("c4_output.txt")
         food.values()
         meal1 = Meals(self.person.daily_cal,self.person.protein_g,food.cal_pro_list)

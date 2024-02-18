@@ -6,7 +6,7 @@ class Constants:
     ["Overweight",25.0,29.9],
     ["Obesity",30,100]]
     hall_links = [["c4","https://binghamton.sodexomyway.com/dining-near-me/c4-dining-hall"],
-                  ["hinam","https://binghamton.sodexomyway.com/dining-near-me/hinman-dining-hall"],
+                  ["hinman","https://binghamton.sodexomyway.com/dining-near-me/hinman-dining-hall"],
                   ["app","https://binghamton.sodexomyway.com/dining-near-me/appalachian-dining-hall"]]
     CARB_PERCENT_RANGE = (.45,.65)
     FAT_PERCENT_RANGE = (.20,.35)
