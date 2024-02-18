@@ -28,9 +28,11 @@ class Diet():
 
 
     def nutrients(self):
-        self.carbs = self.macro_nut(.45,.65,4)
-        self.fats = self.macro_nut(.20,.35,9)
-        self.fiber = self.daily_cal / 1000 *14
-        
+        self.carbs_g = self.macro_nut(.45,.65,4)
+        self.fats_g = self.macro_nut(.20,.35,9)
+        self.fiber_g = self.daily_cal / 1000 *14
+        self.protein_g = 0
+
+
 
     
