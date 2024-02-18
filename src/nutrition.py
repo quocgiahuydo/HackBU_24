@@ -1,6 +1,6 @@
 import requests
 import os
-
+from api_key import API
 
 class Nutrition:
     def __init__(self,food):
@@ -8,10 +8,10 @@ class Nutrition:
     def values(self):
         query = self.food
         api_url = 'https://api.api-ninjas.com/v1/nutrition?query={}'.format(query)
-        response = requests.get(api_url, headers={'X-Api-Key': os.getenv('nutrition_api')})
+        response = requests.get(api_url, headers={'X-Api-Key': f"{API.nutrition_api}"})
         if response.status_code == requests.codes.ok:
             return response.text
         else:
             print("Error") 
-food = Nutrition("scrambled eggs")
+food = Nutrition("eggs")
 print(food.values())
