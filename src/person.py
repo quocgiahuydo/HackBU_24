@@ -23,7 +23,7 @@ class Person:
         for i in range(len(C.BMI_RANGES)):
             if C.BMI_RANGES[i][1] <= self.bmi <= C.BMI_RANGES[i][2]:
                 self.weight_status = C.BMI_RANGES[i][0]
-                return self.weight_status
+                return self.bmi ,self.weight_status
             
             
 

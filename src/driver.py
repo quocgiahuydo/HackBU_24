@@ -5,7 +5,7 @@ from src.data_config.dining_hall_file import Dining_Hall_File
 #from src.data_config.nutrition import Nutrition
 from src.data_config.pdf_to_txt import Pdf_To_Txt
 
-class Driver():
+class Driver:
     def __init__ (self):
         pass
 
@@ -14,10 +14,22 @@ class Driver():
         #for i in range(len(C.hall_links)):
            temp = Dining_Hall_File(C.hall_links[0][0],C.hall_links[0][1])
            txt = Pdf_To_Txt(temp.get_hall_file())
+    def person_setup(self):
+        age = input("please enter your age ")
+        weight = input("please enter your weight in lbs ")
+        height = input("please enter your height in inches ")
+        sex = input("please enter your sex, male or female ")
+        person = Person(age,weight,height,sex)
+        person.bmi_calc()
+        print(person.bmi)
+        print(person.weight)
+
+
            
 
     def run(self):
-        self.config_data()
+        #self.config_data()
+        self.person_setup()
 
 
     
