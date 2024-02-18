@@ -6,7 +6,7 @@ from src.driver import Driver
 
 def main():
     driver = Driver()
-    driver.config_data()
+    driver.run()
 
 
 main()
