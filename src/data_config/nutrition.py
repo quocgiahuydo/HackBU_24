@@ -13,5 +13,5 @@ class Nutrition:
             return response.text
         else:
             print("Error") 
-food = Nutrition("eggs")
+food = Nutrition("Country Style Scrambled Eggs")
 print(food.values())

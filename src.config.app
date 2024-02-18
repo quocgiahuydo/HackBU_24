@@ -7,22 +7,23 @@ IQyou have food allergies or a special dietary requirement, please contact the m
 
 
 
+
 Country Style Scrambled Eggs
 Contains milk, egg, soy
 Scrambled Eggs
 Contains milk, egg, soy
+
 Bacon
 Turkey Bacon
-Spanish Style Breakfast Potatoes Tofu Scramble
+Spanish Style Breakfast Potatoes .
+Tofu Scramble
 Contains soy
-Oatmeal
 $0.96
 $0.60
 $0.50
 $0.37
 $0.37
 $0.58
-$0.09/oz.
 
 
 
@@ -118,74 +119,69 @@ Baked Potato                                    $0.
 = Vegan
 Consumer advisory: Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk offood borne illness. We may experience substitutions ofsome of ourfood and beverage items, and therefore, nutrition and allergen information is subject to change. If you have a food allergy or are looking for additionalnutrition information, please ask to speak with a manager.
 
+IQ you have food allergies or a speriaf dietary requirement
+please contact the manager on duly or one a/ our ftegistered Oietitions.
 
 
-THE
-If you have food allergies or a special dietary requirement, please contact the manager on duty or one of our Registered Dietitians.
 
 
 Today's Special:
-French Toast Sticks
+French Toast Sticksa
 Contains milk, egg, wheat, soy, gluten
-*Gluten-free buns available upon request.
+“Gluten-free buns available upon request.
 Hamburger
 Contains milk, egg, wheat, soy, gluten
 Cheeseburger
 Contains milk, egg, wheat, soy, gluten
+Bacon Cheeseburger
+Contains milk, egg, wheat, soy, gluten
+
+Beyond Burger@a a
+Contains wheat, coconut, soy, gluten, sesame
+Black Bean Burgera a
+Contains wheat, soy, gluten, sesame
 
 
 
-Philly Cheesesteak
+$3.08   Philly Cheesesteak
 Contains milk, wheat, soy, gluten, sesame
 
 $3.21  Chicken Tenders
 Contains wheat, gluten
-0.94
+$3.71   Grilled Chicken Sandwich
+Contains milk, egg, wheat, soy, gluten
+$3.77  Grilled Cheese Sandwicha
+Contains milk, wheat, soy, gluten, sesame
+2.67  French Fries
+Contains wheat, gluten
+
+$0.94
 
 $3.54
 
 $3.17
 
-Bacon Cheeseburger
-Contains milk, eggs, wheat, soy, gluten
+$2.96
+$0.68
+$1.08
 
-Beyond Burger^a  e
-Contains wheat, coconut, soy, gluten, sesame
-Black Bean Burgera e
-Contains wheat, soy, gluten, sesame
 Garden Burgera
 Contains milk, wheat, soy, gluten, sesame
-Turkey Burger
-Contains milk, egg, wheat, soy, gluten
-$3'71
-$3.77
-
-s  2.67
-
 $2.67
-2.56
-Grilled Chicken Sandwich
-Contains milk, egg, wheat, soy, gluten
-
-Grilled Cheese Sandwicha
-Containsmilk, wheat, soy, gluten, sesame
-
-French Friesa
-Contains wheat, gluten
-
 Boar's Head Hot Dog
-Contains milk, wheat, soy, gluten, sesame
-
-$2.96
-
-$0.68
-
-$1.08
 $1.97
 
+Turkey Burger
+Contains milk, egg, wheat, soy, gluten
 
-Vegetarian      Vegan     = Plant-Based
-We may experience substitutions ofsome of ourfood and beverage items, and therefore, nutrition and allergen information is subject to change. 'If you have a food allergy or are looking for additional nutrition information, please ask to speak with a manager.
+
+Vegetarian     Vegan    = Plant-Based
+Contains milk, wheat, soy, gluten, sesame
+$2.56   Add Cheese Sauce §S $0.32 ) Add Chili $0.62
+Contai'ns mi'lk, soy               Contai'ns wheat, soy, gluten
+
+
+We may experience substitutions ofsome of ourfood and beverage items, and therefore, nutrition and allergen information is subject to change. If you have a food allergy or are looking for additional nutrition information, please ask to speak with a manager.
 
 
 
@@ -222,6 +218,10 @@ Contains wheat, soy gluten, coconut
 .59
 
 S0.77
+
+
+
+
 
 
 
