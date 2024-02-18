@@ -3,7 +3,7 @@ import os
 import requests
 from datetime import date
 import os
-import fitz
+
 
 
 def get_c4_menu():
