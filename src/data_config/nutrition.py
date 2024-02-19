@@ -10,7 +10,7 @@ class Nutrition:
         self.list = []
         self.cal_pro_list =[]
     def values(self):
-        with open(self.file, 'r') as f:
+        with open("food_menus/c4_out.txt", 'r') as f:
             for aline in f:
                 query = str(aline)
                 api_url = 'https://api.api-ninjas.com/v1/nutrition?query={}'.format(query)

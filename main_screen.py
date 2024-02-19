@@ -184,7 +184,7 @@ class mainApp(MDApp,Driver):
         BMI=MDLabel(text="Your BMI:  "+str(person.bmi_calc()),
                          halign="center",font_style="Subtitle2",
                          pos_hint={"center_x":0.5 ,"center_y":0.8})
-        Cal=MDLabel(text="Your calories is:  "+str(person.calories),
+        Cal=MDLabel(text="Your calories is:  "+str(person.daily_cal),
                          halign="center",font_style="Subtitle2",
                          pos_hint={"center_x":0.5 ,"center_y":0.7})
         Pro=MDLabel(text="The required protein is:  "+str(protein),
