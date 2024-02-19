@@ -1,14 +1,16 @@
-from MD.kivymd.app import MDApp
-from MD.kivymd.uix.label import MDLabel,MDIcon
-from MD.kivymd.uix.screen import Screen
-from MD.kivymd.uix.button import MDRoundFlatButton
-from MD.kivymd.uix.textfield import MDTextField
-from MD.kivy.lang import Builder
-from MD.kivymd.uix.list import OneLineListItem, MDList
-from MD.kivy.uix.scrollview import ScrollView
-from MD.kivy.core.window import Window
+from kivymd.app import MDApp
+from kivymd.uix.label import MDLabel,MDIcon
+from kivymd.uix.screen import Screen
+from kivy.uix.screenmanager import Screen,ScreenManager
+from kivymd.uix.button import MDRoundFlatButton
+from kivymd.uix.textfield import MDTextField
+from kivy.lang import Builder
+from kivymd.uix.list import OneLineListItem, MDList
+from kivy.uix.scrollview import ScrollView
+from kivy.core.window import Window
 from src.driver import Driver 
 from src.person import Person
+from kivy.uix.button import Button
 
 
 
@@ -91,13 +93,24 @@ MDLabel:
 """
 
 
+
+gender_label="""
+MDLabel:
+    text:"Gender: "
+    halign:"center"
+    font_style:"Subtitle2"
+    pos_hint:{"center_x":0.3,"center_y":0.5}
+ """      
 class mainApp(MDApp,Driver):
     Window.size=(360,600)
     def build(self):
+
+        self.sm=ScreenManager()
+        self.screen=Screen(name='input')
+        self.gender=[]
         self.theme_cls.primary_palette="Green"
-        screen=Screen()
-       
-        label=MDLabel(text="Calories Tracker", halign="center", font_style="Subtitle1",pos_hint={"center_x":0.5,"center_y":0.9})
+        
+        self.label=MDLabel(text="Calories Tracker", halign="center", font_style="Subtitle1",pos_hint={"center_x":0.5,"center_y":0.9})
         self.input_age=Builder.load_string(age)
         self.input_age_tag=Builder.load_string(age_label)
         self.input_weight=Builder.load_string(weight)
@@ -106,10 +119,10 @@ class mainApp(MDApp,Driver):
         self.input_height_tag=Builder.load_string(height_label)
         self.input_exercise=Builder.load_string(exercise)
         self.input_exercise_tag=Builder.load_string(exercise_label)
-        button=MDRoundFlatButton(text='Checking'
-                                 , pos_hint={'center_x':0.5,'center_y':0.4}
-                                 , on_release=self.takedata)
-        self.male=MDRoundFlatButton(
+        self.button=MDRoundFlatButton(text='Submit'
+                                 , pos_hint={'center_x':0.5,'center_y':0.2}
+                                 , on_release=self.second_phase)
+        self.male_input=MDRoundFlatButton(
                           text='Male',
                           halign='center', 
                           theme_text_color='Custom',
@@ -118,7 +131,7 @@ class mainApp(MDApp,Driver):
                           size_hint=(0.05,0.05),
                           on_release=self.male)
         
-        self.female=MDRoundFlatButton(text='Female',
+        self.female_input=MDRoundFlatButton(text='Female',
                         halign='center', 
                         theme_text_color='Custom',
                         text_color=(0,1,0,1),
@@ -126,34 +139,63 @@ class mainApp(MDApp,Driver):
                         size_hint=(0.05,0.05),
                         on_release=self.female)
         
+        self.screen.add_widget(self.label)
+        self.screen.add_widget(self.input_exercise)
+        self.screen.add_widget(self.input_age)
+        self.screen.add_widget(self.input_age_tag)
+
+        self.screen.add_widget(self.input_weight)
+        self.screen.add_widget(self.input_weight_tag)
+        self.screen.add_widget(self.input_height)
+        self.screen.add_widget(self.input_height_tag)
+        self.screen.add_widget(self.male_input)
+        self.screen.add_widget(self.female_input)
+
         self.input_gender_tag=Builder.load_string(gender_label)
+        self.screen.add_widget(self.input_gender_tag)
+
+        self.screen.add_widget(self.input_exercise_tag)
+        self.screen.add_widget(self.button)
+
+      
+
         
-        screen.add_widget(label)
-        screen.add_widget(self.input_age)
-        screen.add_widget(self.input_age_tag)
-
-        screen.add_widget(self.input_weight)
-        screen.add_widget(self.input_weight_tag)
-        screen.add_widget(self.input_height)
-        screen.add_widget(self.input_height_tag)
-        screen.add_widget(self.male)
-        screen.add_widget(self.female)
-        screen.add_widget(self.input_gender_tag)
-
-        screen.add_widget(self.input_exercise)
-        screen.add_widget(self.input_exercise_tag)
-        return screen
+        self.sm.add_widget(self.screen)
+        return self.sm
+    
+    def clean_canvas(self,obj):
+        self.screen.canvas.clear()
+        self.answer="exit"
     def male(self,obj):
-        self.gender="male"
+        self.gender.append('male')
     def female(self,obj):
-        self.gender="female"
-    def takedata(self,obj):
-        person = Person(self.input_age,self.input_weight,self.input_height,self.gender,self.input_exercise)
-        person.bmi_calc()
-        person.calories()
-        person.nutrients()
-        print(person.carbs_g)
-        print(person.fats_g)
-        print(person.fiber_g)
-        print(person.protein_g)
+        self.gender.append('female')
+    def moveto(self,obj):
+        print("testing")
+    def second_phase(self,obj):
+        self.label2=MDLabel(text="Calories Tracker", halign="center", font_style="Subtitle1",pos_hint={"center_x":0.5,"center_y":0.9})
+       
+        self.clean_canvas(self)
+        self.answer="submit"
+        person = Person(float(self.input_age.text),float(self.input_weight.text),float(self.input_height.text),self.gender[-1],float(self.input_exercise.text))
+        print(person.bmi_calc())
+        person.calories(),person.nutrients()
+        protein = person.protein_g
+        BMI=MDLabel(text="Your BMI:  "+str(person.bmi_calc()),
+                         halign="center",font_style="Subtitle2",
+                         pos_hint={"center_x":0.5 ,"center_y":0.8})
+        Cal=MDLabel(text="Your calories is:  "+str(person.calories),
+                         halign="center",font_style="Subtitle2",
+                         pos_hint={"center_x":0.5 ,"center_y":0.7})
+        Pro=MDLabel(text="The required protein is:  "+str(protein),
+                         halign="center",font_style="Subtitle2",
+                         pos_hint={"center_x":0.5 ,"center_y":0.6})
+        self.screen.add_widget(self.label2)
+        self.screen.add_widget(BMI)
+        self.screen.add_widget(Pro)
+        self.screen.add_widget(Cal)
+
+        return self.sm
+
+
 mainApp().run()  
